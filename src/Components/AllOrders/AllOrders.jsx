@@ -66,7 +66,7 @@ export default function AllOrders() {
                   disabled={isConfirmed}
                   onClick={() => handleConfirm(order._id)}
                 >
-                  {isConfirmed ? 'Received' : 'Recieved'}
+                  {isConfirmed ? 'Received' : 'Mark as Received'}
                 </button>
               </div>
             );

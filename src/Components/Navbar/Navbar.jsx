@@ -39,8 +39,8 @@ export default function Navbar() {
     <>
       <nav className="z-50 p-5 bg-cyan-600 dark:bg-cyan-900 text-gray-200 dark:text-white">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-          <Link to='/home'>
-            <img src={logo} className="h-6 " alt="fresh cart Logo" />
+          <Link to='/home' className='pb-5'>
+            <img src={logo} className="h-5 " alt="fresh cart Logo" />
           </Link>
           <div className="flex items-center space-x-4 rtl:space-x-reverse">
             {userToken && (
@@ -91,24 +91,24 @@ export default function Navbar() {
       <nav className="z-50 p-3 bg-cyan-900 dark:bg-cyan-950 text-gray-200 dark:text-white">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex items-center">
-            <ul className="flex m-auto flex-row font-medium mt-0 space-x-2 sm:space-x-3 md:space-x-6 lg:space-x-8 rtl:space-x-reverse text-sm">
+            <ul className="flex m-auto flex-row font-medium mt-0 space-x-0 sm:space-x-2 md:space-x-6 lg:space-x-8 rtl:space-x-reverse text-sm">
               <li>
-                <NavLink to="/home" className={({ isActive }) => `p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language==='ar' ?'الرئيسية':'Home'}</NavLink>
+                <NavLink to="/home" className={({ isActive }) => ` p-1.5 sm:p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language==='ar' ?'الرئيسية':'Home'}</NavLink>
               </li>
               <li>
-                <NavLink to="/categories" className={({ isActive }) => `p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language==='ar' ?'الفئات':'Categories'}</NavLink>
+                <NavLink to="/categories" className={({ isActive }) => `p-1.5 sm:p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language==='ar' ?'الفئات':'Categories'}</NavLink>
               </li>
               <li>
-                <NavLink to="/brands" className={({ isActive }) => `p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language === 'ar' ? 'الماركات' : 'Brands'}
+                <NavLink to="/brands" className={({ isActive }) => `p-1.5 sm:p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language === 'ar' ? 'الماركات' : 'Brands'}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/products" className={({ isActive }) => `p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language === 'ar' ? 'المنتجات' : 'Products'}
+                <NavLink to="/products" className={({ isActive }) => `p-1.5 sm:p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language === 'ar' ? 'المنتجات' : 'Products'}
                 </NavLink>
               </li>
               <li>
                 {userToken && (
-                  <NavLink to="/allorders" className={({ isActive }) => `p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language === 'ar' ? 'طلباتي' : 'My orders'}</NavLink>
+                  <NavLink to="/allorders" className={({ isActive }) => `p-1.5 sm:p-3 rounded-[10px] hover:text-gray-300 ${isActive ? 'bg-black/20' : ''}`}>{language === 'ar' ? 'طلباتي' : 'My orders'}</NavLink>
                 )}
               </li>
             </ul>
